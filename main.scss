@@ -1,0 +1,170 @@
+$color-primario: #ffefe7;
+$color-salud: #ffd9c7;
+$color-hogar: #bcbb8f;
+$color-texto-primario: #7c6a0a;
+$font: "IBM Plex Sans", sans-serif;
+$p-size: 1.5em;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $color-primario;
+  font-family: $font;
+}
+
+.navbar {
+  background-color: $color-primario;
+  width: auto;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  color: $color-texto-primario;
+  padding: 15px;
+  p {
+    font-size: $p-size;
+    padding-left: 30px;
+  }
+  .icons {
+    display: flex;
+    gap: 15px;
+    button {
+      background: none;
+      border-style: none;
+    }
+  }
+}
+
+article {
+  width: auto;
+  color: $color-texto-primario;
+  display: flex;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 70px;
+  justify-content: space-between;
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 25px;
+  }
+  h1 {
+    font-size: 3em;
+    padding: 0px;
+    margin: 0px;
+  }
+  p {
+    font-size: $p-size;
+  }
+  button {
+    width: 12vw;
+    padding: 20px;
+    background: #fa9500;
+    border-radius: 35px;
+    border-style: none;
+    color: white;
+    font-size: 1em;
+  }
+  img {
+    width: 25vw;
+    border-radius: 19px;
+  }
+}
+
+.principal {
+  background-color: $color-primario;
+  width: 100%;
+}
+
+section {
+  width: auto;
+  height: auto;
+  padding: 60px;
+  h2 {
+    color: $color-texto-primario;
+    font-size: 2em;
+  }
+  .salud {
+    padding-bottom: 60px;
+    h2 {
+      font-weight: 300;
+      padding-bottom: 30px;
+    }
+    .card-section {
+      display: flex;
+      width: auto;
+      height: auto;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 160px;
+      row-gap: 75px;
+    }
+    .product-card {
+      width: 14vw;
+      height: auto;
+      background-color: $color-salud;
+      color: $color-texto-primario;
+      padding: 20px;
+      border-radius: 8px;
+      .icon {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 12px;
+      }
+      .producto {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 12vw;
+          height: 30vh;
+          border-radius: 6px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .hogar {
+    @extend .salud;
+    .product-card {
+      background-color: $color-hogar;
+      color: white;
+    }
+  }
+}
+
+// section .info{
+//   .sobre{
+//     h2{
+//       font-weight: bold;
+//     }
+//     .mision-section{
+//       background-color: #7c6a0a;
+//     }
+//   }
+// }
+
+.galeria{
+  .galeria-imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    img {
+      width: 30vw;
+      height: 45vw;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+  }
+}
+
+.footer {
+  $colorfooter: #ff921c;
+  background-color: $colorfooter;
+  width: 100%;
+  height: 300px;
+}
